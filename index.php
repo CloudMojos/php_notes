@@ -8,20 +8,17 @@
 	</head>
 	<body>
 		<form action="index.php" method="post">
-			<label for="quantity">quantity: </label>
-			<input name="quantity" type="number">
+			<label for="x">x: </label>
+			<input name="x" type="text">
 			<input type="submit" value="total">
 		</form>
 	</body>
 </html>
 <?php 
-	$item = "pizza";
-	$price = 5.99;
-	$quantity = $_POST["quantity"];
+	$x = $_POST["x"];
 	$total = null;
 
-	$total = $quantity * $price;
+	$total = abs($x);
 
-	echo "You have ordered {$quantity} x {$item}(s) <br>";
-	echo "Your total is: \${$total}";
+	echo $total;
 ?>
